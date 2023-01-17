@@ -7,10 +7,10 @@
 // a = -3 b = 9 -> нет
 
 Console.WriteLine("Введите квадрат числа: ");
-int square = Console.Convert.ToInt32(Console.ReadLine());
+int square = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число квадрат которого вы ввели: ");
-int number = Console.Convert.ToInt32(Console.ReadLine());
-if (square/2 == number)
+int number = Convert.ToInt32(Console.ReadLine());
+if (number * number == square)
 {
     Console.WriteLine($"Число {square} является квадратом числа {number}");
 }
