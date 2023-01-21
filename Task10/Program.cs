@@ -10,11 +10,17 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int secondDig = SecondDigit(number);
 
-Console.WriteLine(secondDig);
-
 int SecondDigit(int num)
 {
     int num1 = number / 10;
     int num2 = num1 % 10;
     return num2;
 }
+
+if (number >= 100 && number < 1000)
+{
+
+    Console.WriteLine(secondDig);
+
+}
+else Console.WriteLine("Wrong input");
