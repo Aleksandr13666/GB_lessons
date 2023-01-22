@@ -14,7 +14,7 @@ int result = DelSecondaryNum(number);
 
 Console.WriteLine($"Result: {result}");
 
-int DelSecondaryNum(int num)
+static int DelSecondaryNum(int num)
 {
     int agr1 = num / 100;
     int arg2 = num % 10;
