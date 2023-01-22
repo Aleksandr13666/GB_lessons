@@ -20,7 +20,7 @@ double hypotenuse = Hypotenuse(x1, x2, y1, y2);
 
 Console.WriteLine($"Hypotenuse of two dots, A & B = {hypotenuse}");
 
-double Hypotenuse(int x1, int x2, int y1, int y2)
+double Hypotenuse(int x1, int y1, int x2, int y2)
 {
      double result = Math.Sqrt((x1 - y1) * (x1 - y1) + (x2 - y2) * (x2 - y2));
      double res = Math.Round(result, 2, MidpointRounding.ToZero);
