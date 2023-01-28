@@ -13,6 +13,7 @@ int sum = Sum(number);
 int Sum(int number)
 
 {
+   
    int count = 1;
    int i = 0 ;
    while(count <= number)
@@ -21,6 +22,7 @@ int Sum(int number)
        count++;
    }
    return i;
+
 }
 
 Console.WriteLine($"Sum all number is {sum}");
