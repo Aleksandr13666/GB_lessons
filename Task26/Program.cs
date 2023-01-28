@@ -19,7 +19,7 @@ int CountDigit(int num)
 
     int count = 1;
 
-    while(num > 9)
+    while(num > 0)
     {
         num = num / 10;
         count ++; 
