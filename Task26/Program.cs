@@ -17,9 +17,9 @@ int CountDigit(int num)
 {
     if (number < 0) num *= -1;
 
-    int count = 0;
+    int count = 1;
 
-    while(num > 0)
+    while(num > 9)
     {
         num = num / 10;
         count ++; 
