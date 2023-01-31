@@ -11,16 +11,30 @@ int numA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input degree of number: ");
 int numB = Convert.ToInt32(Console.ReadLine());
 
-
-void Degree(int numA, int numB)
+int degree = Degree(numA, numB);
+// void Degree(int numA, int numB)
+// {
+//     Console.WriteLine(Math.Pow(numA, numB) + "");
+// }
+int Degree(int numA, int numB)
 {
-    Console.WriteLine(Math.Pow(numA, numB) + "");
+    int deg = 1;
+    for (int i = 0; i < numB; i++)
+    {
+        deg *= numA; 
+    }
+    return deg;
 }
 
 if (numB > 0)
 {
-    Degree(numA, numB);
+    Console.WriteLine($"{degree}");
 }
+
+// if (numB > 0)
+// {
+//     Degree(numA, numB);
+// }
 
 else
 {
