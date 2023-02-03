@@ -11,13 +11,16 @@ int digit = Convert.ToInt32(Console.ReadLine());
 
 int binary = Binary(digit);
 
+
 int Binary(int dig)
 {
     int result = 0;
-    for(int i = 0; i < dig; i++)
+    int number = 1;
+    while (dig > 0)
     {
-        result += dig % 2;
-        dig /= 2; 
+        result += dig % 2 * number;
+        dig /= 2;
+        number *= 10;
     }
     return result;
 }
