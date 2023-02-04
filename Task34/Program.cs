@@ -3,6 +3,10 @@
 
 // [345, 897, 568, 234] -> 2
 
+
+
+
+
 int[] CreateArray (int size, int min, int max)
 {
     int[] arr = new int[size];
@@ -25,4 +29,19 @@ void PrintArray(int[] arr)
     Console.Write("]");
 }
 
-int PositiveNum()
+int[] PositiveNum(int[] array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
+        count++;
+    }
+    return new int []{count};
+}
+
+int[] arr = CreateArray(10, 100, 300);
+PrintArray(arr);
+Console.WriteLine("");
+int[] posnNum = PositiveNum(arr);
+Console.WriteLine($"Quantity of even digits is {posnNum[0]}");
