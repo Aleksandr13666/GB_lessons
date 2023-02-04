@@ -5,6 +5,7 @@
 // [-4, -6, 89, 6] -> 0
 
 
+
 int[] CreateArray (int size, int min, int max)
 {
     int[] arr = new int[size];
@@ -26,3 +27,21 @@ void PrintArray(int[] arr)
     }
     Console.Write("]");
 }
+
+int[] NegativPositions(int[] array)
+{
+    int count = array.Length;
+    int index = 1;
+    int summ = 0;
+     while(index < count)
+    {
+        summ += array[index];
+        index+=2;
+    }
+    return new int[]{summ};
+}
+
+int[] arr = CreateArray(4, 1, 6);
+PrintArray(arr);
+int[] negPosition = NegativPositions(arr);
+Console.WriteLine($"Summ numbers of the negative positions is {negPosition[0]}");
