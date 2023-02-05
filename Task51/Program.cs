@@ -31,15 +31,17 @@ int[,] CreateMatrix(int rows, int columns, int min, int max)
 int NumSum(int[,] matr)
 {
     int sum = 0;
-    for (int i = 0; i < matr.GetLength(0); i+=2)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (int j = 0; j < matr.GetLength(1); j+=2)
-        {
-            if (i == j)
-            {
-                sum = matr[i, j] + matr[i, j];
-            }
-        }
+
+        sum += matr[i, i]; смотри семинар 7
+        // for (int j = 0; j < matr.GetLength(1); j++)
+        // {
+        //     if (i == j)
+        //     {
+        //         sum += matr[i, j];
+        //     }
+        // }
     }
     return sum;
 }
@@ -52,7 +54,7 @@ void PrintMatr(int[,] matr)
         Console.Write("[");
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            if (j < matr.GetLength(1) - 1) Console.Write($"{matr[i, j],4} | ");
+            if (j < matr.GetLength(1) -1) Console.Write($"{matr[i, j],4} | ");
             else Console.Write($"{matr[i, j],4} ");
         }
         Console.WriteLine("]");
@@ -63,4 +65,5 @@ int[,] array2D = CreateMatrix(3, 4, 1, 10);
 PrintMatr(array2D);
 Console.WriteLine("");
 int numSum = NumSum(array2D);
-Console.WriteLine($"{numSum}");
+Console.WriteLine(numSum);
+PrintMatr(array2D);
