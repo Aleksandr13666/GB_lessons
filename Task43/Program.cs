@@ -6,6 +6,8 @@
 
 
 
+using System;
+
 Console.WriteLine("Input meaning first direct line B1: ");
 int B1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input meaning second direct line K1: ");
@@ -51,5 +53,5 @@ double IntersectionY(int B1, int K1, int B2, int K2)
 
 void PrintRez(double IntersectionX, double IntersectionY)
 {
-    Console.WriteLine($"Intersection point is:{intersectionX}, {intersectionY} ");
+    Console.WriteLine($"Intersection point is:{intersectionX},{intersectionY} ");
 }
