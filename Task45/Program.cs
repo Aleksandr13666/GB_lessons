@@ -6,6 +6,7 @@ int[] firstArr = CreateArray(10, 5, 25);
 PrintArray(firstArr);
 Console.WriteLine();
 int[] copyArr = CopyArr(firstArr);
+copyArr[3] = -9;
 PrintArray(copyArr);
 
 
