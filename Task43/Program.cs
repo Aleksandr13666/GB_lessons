@@ -9,13 +9,13 @@
 using System;
 
 Console.WriteLine("Input meaning first direct line B1: ");
-int B1 = Convert.ToInt32(Console.ReadLine());
+double B1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input meaning second direct line K1: ");
-int K1 = Convert.ToInt32(Console.ReadLine());
+double K1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input meaning first direct line B2: ");
-int B2 = Convert.ToInt32(Console.ReadLine());
+double B2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input meaning second direct line K2: ");
-int K2 = Convert.ToInt32(Console.ReadLine());
+double K2 = Convert.ToInt32(Console.ReadLine());
 
 
 double intersectionX = IntersectionX(B1, K1, B2, K2);
@@ -24,7 +24,7 @@ double intersectionY = IntersectionY(B1, K1, B2, K2);
 
 PrintRez(intersectionX, intersectionY);
 
-double IntersectionX(int B1, int K1, int B2, int K2)
+double IntersectionX(double B1, double K1, double B2, double K2)
 {
     double x = 0;
     if ((K1 == K2) && (B1 == B2))
@@ -37,7 +37,7 @@ double IntersectionX(int B1, int K1, int B2, int K2)
     }
     return Math.Round(x, 2, MidpointRounding.ToZero);
 }
-double IntersectionY(int B1, int K1, int B2, int K2)
+double IntersectionY(double B1, double K1, double B2, double K2)
 {
     double y = 0;
     if ((K1 == K2) && (B1 == B2))
@@ -46,7 +46,7 @@ double IntersectionY(int B1, int K1, int B2, int K2)
         Console.WriteLine("Straight parallel");
     else
     {
-        y = (K1 * (B2 - B1)) / ((K1 - K2) + B1);
+        y = K1 * ((B2 - B1)) / ((K1 - K2)) + B1;
     }
     return Math.Round(y, 2, MidpointRounding.ToZero);
 }
