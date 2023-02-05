@@ -1,4 +1,10 @@
-﻿int[] CreateArrayRndInt(int size, int min, int max)
+﻿// 39. Напишите программу которая перевернет одномерный массив
+// (1.2.3.4.5) - (5.4.3.2.1)
+
+
+
+
+int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
