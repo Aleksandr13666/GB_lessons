@@ -34,7 +34,8 @@ int NumSum(int[,] matr)
     for (int i = 0; i < matr.GetLength(0); i++)
     {
 
-        sum += matr[i, i]; смотри семинар 7
+        sum += matr[i, i]; 
+        // смотри семинар 7
         // for (int j = 0; j < matr.GetLength(1); j++)
         // {
         //     if (i == j)
