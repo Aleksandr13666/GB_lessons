@@ -7,3 +7,35 @@
 // 1 -3,3 8 -9,9
 
 // 8 7,8 -7,1 9
+
+double[,] myMatr = CreateDubMatr(3, 4);
+PrintMatrix(myMatr);
+
+
+double[,] CreateDubMatr(int rows, int columns)
+{
+   double[,] matr = new double [rows, columns];
+   Random rnd = new Random();
+   for (int i = 0; i < matr.GetLength(0); i++)
+   {
+    for(int j = 0; j < matr.GetLength(1); j++)
+    {
+     matr[i, j] = Math.Round(rnd.Next(-100, 100) * 0.1, 1, MidpointRounding.ToZero);
+    }
+   }
+   return matr;
+}
+
+void PrintMatrix(double[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+    Console.Write("[");
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        if(j < matrix.GetLength(1) - 1)Console.Write($"{matrix[i, j], 8}, | ");
+        else Console.Write($"{matrix[i, j], 8}");
+    }
+    Console.WriteLine("]");
+    }
+}
