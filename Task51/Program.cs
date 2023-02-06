@@ -9,7 +9,6 @@
 // Сумма элементов главной диагонали 1+9+2=12
 
 
-using System.Diagnostics.CodeAnalysis;
 
 int[,] CreateMatrix(int rows, int columns, int min, int max)
 {
