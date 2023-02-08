@@ -34,21 +34,19 @@ int[,] CreateMatrix(int rows, int columns, int min, int max)
     return matr;
 }
 
-void MyFind(int[,] matr)
+void MyFind(int[,] matr, int xPos, int yPos)
 {
 
-      for (int i = 0; i < matr.GetLength(0); i++)
-      {
-       for (int j = 0; j < matr.GetLength(1); i++)
-       {
-          if(matr[i, j] == matr[xPos, yPos])
-          {
-            Console.WriteLine($"Number of position is: {matr[i, j]}");
-          }
-          else Console.WriteLine("Out of index.");
-       } 
-      }
-    //   return new int[,]{};
+    if(xPos < 0 | xPos > matr.GetLength(0)-1 | yPos < 0 | yPos > matr.GetLength(1)-1)
+    {
+        Console.WriteLine("this index is does not exist");
+    }
+    else
+    {
+        Console.WriteLine($" Number of the element is {matr[xPos, yPos]},");
+    }
+ 
+
 }
 
 void PrintMatr(int[,] matr)
@@ -65,7 +63,6 @@ void PrintMatr(int[,] matr)
     }
 }
 
-int[,] myMatr = CreateMatrix(8, 8, 1, 9);
+int[,] myMatr = CreateMatrix(4, 4, 1, 9);
 PrintMatr(myMatr);
-MyFind(myMatr);
-// PrintMatr(myMatr);
+MyFind(myMatr, xPos, yPos);
