@@ -43,7 +43,7 @@ void MyFind(int[,] matr, int xPos, int yPos)
     }
     else
     {
-        Console.WriteLine($" Number of the element is {matr[xPos, yPos]},");
+        Console.WriteLine($" Digit of the element is {matr[xPos, yPos]},");
     }
  
 
