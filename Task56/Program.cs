@@ -60,7 +60,7 @@ void RowSumm(int[,] matr)
         {
             summ += matr[i, j];
         }
-        Console.WriteLine($"summ of the row {i + 1} = {summ}");
+        // Console.WriteLine($"summ of the row {i + 1} = {summ}");
         if (summ < minimum)
         {
             minimum = summ;
@@ -69,7 +69,8 @@ void RowSumm(int[,] matr)
 
     }
 
-    Console.WriteLine($"Minimal summ {minimum} in row number {index}");
+    // Console.WriteLine($"Minimal summ {minimum} in row number {index}");
+    Console.WriteLine($"Minimal summ in row number {index}");
 }
 
 
