@@ -50,7 +50,7 @@ void PrintMatr(int[,] matr)
 void RowSumm(int[,] matr)
 {
     int summ = 0;
-    int minimum = 0;
+    int minimum = int.MaxValue;
     int index = 0;
 
     for (int i = 0; i < matr.GetLength(0); i++)
@@ -64,12 +64,12 @@ void RowSumm(int[,] matr)
         if (summ < minimum)
         {
             minimum = summ;
-            index = i;
+            index = i + 1;
         }
 
     }
 
-    Console.WriteLine($"Minimal summ in row number {index}");
+    Console.WriteLine($"Minimal summ {minimum} in row number {index}");
 }
 
 
