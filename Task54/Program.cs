@@ -11,6 +11,9 @@
 
 int[,] createMatrix = CreateMatrix(5, 5, 1, 9);
 PrintMatr(createMatrix);
+SortMatrix(createMatrix);
+Console.WriteLine();
+PrintMatr(createMatrix);
 
 
 int[,] CreateMatrix(int rows, int columns, int min, int max)
@@ -44,12 +47,18 @@ void PrintMatr(int[,] matrix)
 
 void SortMatrix(int[,] matrix)
 {
-    int minimum = matrix[0, 0];
-
-    for (int i = 0; i < y / 2; i++)
+  for (int i = 0; i < matrix.GetLength(0); i++)
+  {
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-         temp = matrix[x, y];
-    }
-    
+      for (int k = matrix.GetLength(1) -1; k > j; k--)
+      if(matrix[i, k] > matrix[i, k - 1])
+      {
+       int temp = matrix[i, k];
+       matrix[i, k] = matrix[i, k - 1];
+       matrix[i, k - 1] = temp; 
+      }   
+    } 
+  }
 
 }
