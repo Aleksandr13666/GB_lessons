@@ -32,11 +32,11 @@ int[] ConvertToArray(int[,] matrix)
     int[] array = new int[arrSize];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-       for (int j = 0; j < matrix.GetLength(1); j++)
-       {
-         array[count] = matrix[i, j];
-         count++; 
-       }   
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            array[count] = matrix[i, j];
+            count++;
+        }
     }
     return array;
 }
@@ -47,10 +47,10 @@ int[,] CreateMatrix(int rows, int columns, int min, int max)
     Random rnd = new Random();
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-       for (int j = 0; j < matrix.GetLength(1); j++)
-       {
-         matrix[i, j] = rnd.Next(min, max +1);
-       }   
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = rnd.Next(min, max + 1);
+        }
     }
     return matrix;
 }
@@ -63,8 +63,8 @@ void PrintMatr(int[,] matr)
         Console.Write("[");
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            if (j < matr.GetLength(1) - 1) Console.Write($"{matr[i, j], 4} | ");
-            else Console.Write($"{matr[i, j], 4} ");
+            if (j < matr.GetLength(1) - 1) Console.Write($"{matr[i, j],4} | ");
+            else Console.Write($"{matr[i, j],4} ");
         }
         Console.WriteLine("]");
     }
@@ -75,7 +75,7 @@ void PrintArray(int[] arr)
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        if(i < arr.Length - 1)Console.Write($"{arr[i]}, ");
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
         else Console.Write($"{arr[i]}");
     }
     Console.Write("]");
@@ -87,13 +87,14 @@ void FrequencyDictionary(int[] array)
     int num = array[0];
     for (int i = 0; i < array.Length; i++)
     {
-       if(array[i] == num)
-       count++;
-       else
-       { Console.WriteLine($"Digit {num} is {count}");
-          num = array[i];
-          count = 1;
-       }
+        if (array[i] == num)
+            count++;
+        else
+        {
+            Console.WriteLine($"Digit {num} is {count}");
+            num = array[i];
+            count = 1;
+        }
 
     }
     Console.WriteLine($"Digit {num} is {count}");
