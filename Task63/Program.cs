@@ -6,36 +6,14 @@
 
 
 
-void IncorrectValue()
+Console.WriteLine("Input a number:");
+int num = Convert.ToInt32(Console.ReadLine());
+
+NaturalNumber(num);
+
+void NaturalNumber(int num)
 {
-    Console.WriteLine("Введено некорректное значение");
-    Environment.Exit(0);
+    if (num == 0) return;
+    NaturalNumber(num - 1);
+    Console.Write($"{num} ");
 }
-
-int UserInput()
-{
-    if (!int.TryParse(Console.ReadLine(), out int temp)) IncorrectValue();
-    return temp;
-}
-
-void NaturalNumbers(int numM, int numN)
-{
-    if (numM < numN)
-    {
-        Console.Write($"{numM} ");
-        NaturalNumbers(numM + 1, numN);
-    }
-    else if (numM > numN)
-    {
-        Console.Write($"{numM} ");
-        NaturalNumbers(numM - 1, numN);
-    }
-    else Console.WriteLine(numN);
-}
-
-
-Console.Write("Введите число M: ");
-int number1 = UserInput();
-Console.Write("Введите число N: ");
-int number2 = UserInput();
-NaturalNumbers(number1, number2);
