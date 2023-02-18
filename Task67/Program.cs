@@ -15,7 +15,7 @@ Console.WriteLine($"{summ}");
 int Summ(int num)
 {
     if (num == 0) return 0;
-    else return num % 10 + Summ (num / 10);
+    return num % 10 + Summ (num / 10);
 }
 
 
