@@ -45,3 +45,9 @@ PrintArray(arr);
 Console.WriteLine("");
 int[] posnNum = PositiveNum(arr);
 Console.WriteLine($"Quantity of even digits is {posnNum[0]}");
+
+
+
+// Задачи 34 и 38 - ОК!
+// По задаче 36 решение рабочее, корректное. Сообщение вывода "Summ numbers of the negative positions..." не соответствует фактическому результату - сумме на нечётных позициях.
+// Спасибо.

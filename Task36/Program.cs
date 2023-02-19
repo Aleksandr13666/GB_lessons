@@ -45,3 +45,8 @@ int[] arr = CreateArray(4, 1, 6);
 PrintArray(arr);
 int[] negPosition = NegativPositions(arr);
 Console.WriteLine($"Summ numbers of the negative positions is {negPosition[0]}");
+
+
+// Задачи 34 и 38 - ОК!
+// // По задаче 36 решение рабочее, корректное. Сообщение вывода "Summ numbers of the negative positions..." не соответствует фактическому результату - сумме на нечётных позициях.
+// // Спасибо.
