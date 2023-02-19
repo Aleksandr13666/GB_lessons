@@ -18,6 +18,8 @@ int UserInput()
 
 int NaturalNumbers(int numM, int numN)
 {
+    if (numM < 0) return -1;
+    if (numN < 0) return -1;
     if (numM == 0) return (numN * (numN + 1)) / 2;
     else if (numN == 0) return (numM * (numM + 1)) / 2;
     else if (numM == numN) return numM;
